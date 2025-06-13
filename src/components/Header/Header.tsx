@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { ProfileSection } from './ProfileDropdown';
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { ProfileSection } from "./ProfileDropdown";
 
 export const Header: React.FC = () => {
   const navigate = useNavigate();
@@ -11,7 +11,10 @@ export const Header: React.FC = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo - Aligned to extreme left, clickable */}
-          <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => navigate('/dashboard')}>
+          <div
+            className="flex-shrink-0 flex items-center cursor-pointer"
+            onClick={() => navigate("/dashboard")}
+          >
             <svg
               className="h-8 w-8 text-blue-500"
               fill="none"
@@ -34,8 +37,8 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-end flex-1 gap-4">
             {/* User Management navigation button, highlight if on that page */}
             <button
-              className={`px-4 py-2 rounded font-medium transition-colors ${location.pathname === '/UserManagement' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-blue-100 dark:hover:bg-gray-600'}`}
-              onClick={() => navigate('/UserManagement')}
+              className={`px-4 py-2 rounded font-medium transition-colors ${location.pathname === "/UserManagement" ? "bg-blue-600 text-white" : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-blue-100 dark:hover:bg-gray-600"}`}
+              onClick={() => navigate("/UserManagement")}
             >
               User Management
             </button>
@@ -45,4 +48,4 @@ export const Header: React.FC = () => {
       </div>
     </header>
   );
-}; 
+};

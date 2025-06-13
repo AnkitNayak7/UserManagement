@@ -1,5 +1,5 @@
-import React from 'react';
-import { useTheme } from '../../context/ThemeContext';
+import React from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 export const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -8,10 +8,15 @@ export const ThemeToggle: React.FC = () => {
     <button
       onClick={toggleTheme}
       className="w-full flex items-center gap-2 px-4 py-3 text-sm text-gray-700 dark:text-gray-200"
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
     >
-      {theme === 'light' ? (
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      {theme === "light" ? (
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -20,7 +25,12 @@ export const ThemeToggle: React.FC = () => {
           />
         </svg>
       ) : (
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -29,7 +39,7 @@ export const ThemeToggle: React.FC = () => {
           />
         </svg>
       )}
-      <span>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+      <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
     </button>
   );
-}; 
+};

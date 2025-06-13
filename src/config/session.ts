@@ -4,8 +4,8 @@ export const SESSION_CONFIG = {
   // How often to check session status in milliseconds (default: 10 seconds)
   CHECK_INTERVAL: 10000,
   // Events to monitor for user activity
-  ACTIVITY_EVENTS: ['click', 'keypress', 'scroll', 'mousemove'] as const
+  ACTIVITY_EVENTS: ["click", "keypress", "scroll", "mousemove"] as const,
 } as const;
 
 // Type for the activity events
-export type ActivityEvent = typeof SESSION_CONFIG.ACTIVITY_EVENTS[number]; 
+export type ActivityEvent = (typeof SESSION_CONFIG.ACTIVITY_EVENTS)[number];
